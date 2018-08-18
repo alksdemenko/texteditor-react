@@ -1,0 +1,9 @@
+#control-panel {
+    background-color: #fff;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-top: 5px;
+    justify-content: center;
+}
