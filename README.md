@@ -1,14 +1,8 @@
-# Simple text editor
-This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+# Texteditor
 
-## Initial setup
-Run `npm install` in order to setup application
-
-## Development server
-Run `npm start` for a dev server.
-
-## Notes
-+ Text sample is given in `text.service.js`
-+ Given files structure is not obligatory and could be changed
-
-
+## Usage
+      Run `npm install` in order to setup application
+      
+      Run `npm start` for a dev server.
+      
+      Use double click to select a word.
