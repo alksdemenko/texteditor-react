@@ -45,25 +45,14 @@ class App extends Component {
 
         const updatedList = wordsList.map(elem => {
             if(elem.id === activeWordId){
-                let newStyles;
-                const styleObjKeys = Object.keys(elem.style);
-                if(styleObjKeys.length > 0){
-                    for(let i in elem.style){
-                        if(i === styleType){
-                            newStyles = styleObjKeys.reduce((obj, key) =>{
-                                if(key !== styleType){
-                                    obj[key] = elem.style[key]
-                                }
-                                return obj;
-                            }, {});
-                        } else {
-                            newStyles = {...elem.style, ...style}
-                        }
-                    }
-                } else {
-                    newStyles = style;
+                const styleExist = elem.style[styleType] === style[styleType];
+
+                if(styleExist){
+                    const currentStyle = {[styleType] : null};
+                    elem.style = {...elem.style, ...currentStyle}
+                } else{
+                    elem.style = {...elem.style, ...style};
                 }
-                elem.style = {...newStyles};
             }
             return elem;
         });
